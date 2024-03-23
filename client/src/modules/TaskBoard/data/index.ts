@@ -29,6 +29,22 @@ export const columnss = [
   {
     id: 3,
     title: "Done",
-    tasks: [],
+    tasks: [
+      {
+        id: 4,
+        title: "Create a new design",
+        description: "Create a new design for the homepage.",
+      },
+      {
+        id: 5,
+        title: "Fix the navigation",
+        description: "Fix the navigation bar on the homepage.",
+      },
+      {
+        id: 6,
+        title: "Add new features",
+        description: "Add new features to the homepage.",
+      },
+    ],
   },
 ];

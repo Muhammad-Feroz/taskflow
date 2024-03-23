@@ -3,12 +3,13 @@ interface GridProps {
   gap: number;
   className?: string;
   children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-export default function Grid({ columns, gap, className, children }: GridProps) {
-  const classNames = `grid grid-cols-${columns} gap-${gap} ${className}`
+export default function Grid({ columns, gap, className, children, style }: GridProps) {
+  const classNames = `grid grid-cols-${columns} gap-${gap} ${className || ''}`
   return (
-    <div className={classNames}>
+    <div className={classNames} style={style}>
       {children}
     </div>
   )

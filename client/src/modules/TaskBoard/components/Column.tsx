@@ -15,8 +15,8 @@ export default function Column({ column, handleDrop }:{ column: any, handleDrop:
   return (
     <div className="w-full" ref={drop}>
       <div className="flex justify-between items-center p-2 sticky top-0 bg-indigo-100 px-3">
-        <h2 className="text-md font-bold">{column.title}</h2>
-        <div className="min-h-8 min-w-8 flex justify-center items-center bg-indigo-600 text-white rounded p-1" >
+        <h2 className="text-sm font-bold">{column.title}</h2>
+        <div className="min-h-6 min-w-6 text-xs flex justify-center items-center bg-indigo-600 text-white rounded p-1" >
           {column.tasks.length}
         </div>
       </div>

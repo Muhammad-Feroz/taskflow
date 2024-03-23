@@ -4,6 +4,7 @@ import { useState } from "react";
 import Column from "./components/Column";
 import { columnss } from "./data";
 import { useNavigate } from "react-router-dom";
+import SelectInput from "../../components/SelectInput";
 
 export default function TaskBoard() {
   const [columns, setColumns] = useState(columnss)
@@ -28,7 +29,10 @@ export default function TaskBoard() {
         btnTitle="+ Add Task"
         btnOnClick={() => navigate('/task-board/new')}
       />
-      <Grid columns={3} gap={6} className="h-[700px] overflow-scroll bg-slate-50 px-4 pb-6">
+      <Grid columns={3} gap={10} className="bg-slate-50 p-4 pb-6">
+        <SelectInput lable="Projects" options={[]} selectedOption={null} onChange={() => {}} />
+      </Grid>
+      <Grid columns={3} gap={10} className=" overflow-scroll bg-slate-50 px-4 pb-6 shadow-md" style={{ height: 'calc(100vh - 300px)' }}>
         {
           columns.map((column) => <Column key={column.id} column={column} handleDrop={moveTask} />)
         }
